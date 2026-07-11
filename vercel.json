@@ -10,3 +10,14 @@
     }
   ]
 }
+
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/privacy",
+      "destination": "/pages/privacy.html"
+    }
+  ]
+}
