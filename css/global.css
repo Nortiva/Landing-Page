@@ -975,6 +975,207 @@ nav a:hover{
 
 }
 
+
+/* ========================================
+   SERVIÇO FORA DE CATÁLOGO
+======================================== */
+
+
+.unavailable{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+.status-card{
+
+    width:320px;
+
+    padding:45px 35px;
+
+    text-align:center;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    border-radius:26px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:0 30px 70px rgba(0,0,0,.35);
+
+    animation:statusFloat 4s ease-in-out infinite;
+
+}
+
+
+
+.status-card span{
+
+    width:75px;
+
+    height:75px;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    background:rgba(139,92,246,.12);
+
+    color:var(--primary);
+
+    font-size:35px;
+
+    font-weight:700;
+
+}
+
+
+
+.status-card h3{
+
+    margin-top:25px;
+
+    font-size:1.7rem;
+
+    line-height:1.2;
+
+}
+
+
+
+.status-card p{
+
+    margin-top:12px;
+
+    color:var(--text-secondary);
+
+    font-size:.95rem;
+
+}
+
+
+
+/* ========================================
+   ANIMAÇÃO DO CARD
+======================================== */
+
+
+@keyframes statusFloat{
+
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-12px);
+
+    }
+
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+/* ========================================
+   AJUSTE DA NOVA SEÇÃO
+======================================== */
+
+
+.about-service{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+
+.cta{
+
+    animation:fadeUp .8s ease .2s both;
+
+}
+
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+
+@media(max-width:1024px){
+
+
+    .status-card{
+
+        width:300px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+    .status-card{
+
+        width:280px;
+
+        padding:35px 25px;
+
+    }
+
+
+}
+
+
+
+@media(max-width:480px){
+
+
+    .status-card{
+
+        width:100%;
+
+    }
+
+
+    .status-card h3{
+
+        font-size:1.4rem;
+
+    }
+
+
+}
+
 /* ========================================
    FIM DO ARQUIVO
 ======================================== */
