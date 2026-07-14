@@ -1,0 +1,905 @@
+/* ========================================
+   NORTIVA • DOCUMENTS.CSS
+   Parte 1 + Parte 2
+======================================== */
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+:root{
+
+    --background:#07070A;
+
+    --surface:rgba(255,255,255,.03);
+    --surface-hover:rgba(255,255,255,.05);
+
+    --primary:#8B5CF6;
+    --primary-hover:#7C3AED;
+
+    --text:#FFFFFF;
+    --text-secondary:#94A3B8;
+
+    --border:rgba(255,255,255,.08);
+
+    --radius:20px;
+
+    --transition:.35s ease;
+
+    --max-width:1200px;
+
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:"Inter",sans-serif;
+
+    background:var(--background);
+
+    color:var(--text);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+a{
+
+    color:inherit;
+
+    text-decoration:none;
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+section{
+
+    padding:110px 0;
+
+}
+
+/* ========================================
+   HEADER
+======================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    padding:20px 8%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:rgba(7,7,10,.72);
+
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--border);
+
+    z-index:999;
+
+}
+
+.logo{
+
+    font-size:1.55rem;
+
+    font-weight:800;
+
+    color:var(--primary);
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:28px;
+
+}
+
+nav a{
+
+    color:#CBD5E1;
+
+    transition:var(--transition);
+
+}
+
+nav a:hover{
+
+    color:#FFF;
+
+}
+
+/* ========================================
+   BLUR
+======================================== */
+
+.blur{
+
+    position:fixed;
+
+    width:360px;
+
+    height:360px;
+
+    border-radius:50%;
+
+    background:var(--primary);
+
+    filter:blur(170px);
+
+    opacity:.16;
+
+    pointer-events:none;
+
+    z-index:-1;
+
+}
+
+.blur-1{
+
+    top:-120px;
+
+    left:-120px;
+
+}
+
+.blur-2{
+
+    right:-120px;
+
+    bottom:-120px;
+
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero{
+
+    width:min(var(--max-width),92%);
+
+    margin:auto;
+
+    min-height:60vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:170px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    margin-bottom:22px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:rgba(139,92,246,.12);
+
+    border:1px solid rgba(139,92,246,.25);
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.hero h1{
+
+    font-size:clamp(3rem,6vw,5rem);
+
+    line-height:1.05;
+
+    margin-bottom:25px;
+
+}
+
+.hero h1 span{
+
+    color:var(--primary);
+
+}
+
+.hero p{
+
+    max-width:760px;
+
+    color:var(--text-secondary);
+
+    font-size:1.05rem;
+
+}
+
+/* ========================================
+   DOCUMENTOS
+======================================== */
+
+.documents-grid{
+
+    width:min(var(--max-width),92%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+    margin-top:-30px;
+
+}
+
+.document-card{
+
+    padding:40px;
+
+    border-radius:24px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.document-card:hover{
+
+    transform:translateY(-8px);
+
+    border-color:rgba(139,92,246,.35);
+
+    background:var(--surface-hover);
+
+}
+
+.icon{
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    margin-bottom:24px;
+
+    border-radius:18px;
+
+    background:rgba(139,92,246,.12);
+
+    color:var(--primary);
+
+    font-size:34px;
+
+}
+
+.document-card h2{
+
+    margin-bottom:14px;
+
+    font-size:1.5rem;
+
+}
+
+.document-card p{
+
+    color:var(--text-secondary);
+
+}
+
+/* ========================================
+   DOCUMENTAÇÃO
+======================================== */
+
+.document-section{
+
+    width:min(900px,92%);
+
+    margin:auto;
+
+}
+
+.section-header{
+
+    margin-bottom:60px;
+
+}
+
+.section-tag{
+
+    display:inline-block;
+
+    margin-bottom:16px;
+
+    color:var(--primary);
+
+    font-size:.82rem;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+}
+
+.section-header h2{
+
+    font-size:clamp(2.2rem,5vw,3.6rem);
+
+    margin-bottom:15px;
+
+}
+
+.section-header p{
+
+    color:var(--text-secondary);
+
+}
+
+.document-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.document-content article{
+
+    padding:34px;
+
+    border-radius:22px;
+
+    background:var(--surface);
+
+    border:1px solid var(--border);
+
+    transition:var(--transition);
+
+}
+
+.document-content article:hover{
+
+    border-color:rgba(139,92,246,.28);
+
+    background:var(--surface-hover);
+
+}
+
+.document-content h3{
+
+    margin-bottom:16px;
+
+    font-size:1.35rem;
+
+}
+
+.document-content p{
+
+    color:var(--text-secondary);
+
+}
+
+.document-content ul{
+
+    margin-top:16px;
+
+    margin-left:22px;
+
+    color:var(--text-secondary);
+
+}
+
+.document-content li{
+
+    margin-bottom:10px;
+
+}
+
+/* ========================================
+   CTA
+======================================== */
+
+.cta{
+
+    width:min(var(--max-width),92%);
+
+    margin:auto;
+
+}
+
+.cta-content{
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:linear-gradient(
+
+        180deg,
+
+        rgba(255,255,255,.03),
+
+        rgba(255,255,255,.015)
+
+    );
+
+    border:1px solid var(--border);
+
+}
+
+.cta-content h2{
+
+    margin:20px 0;
+
+    font-size:clamp(2.3rem,5vw,4rem);
+
+}
+
+.cta-content p{
+
+    max-width:700px;
+
+    margin:auto;
+
+    color:var(--text-secondary);
+
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:40px;
+
+    flex-wrap:wrap;
+
+}
+
+.primary,
+.secondary{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:14px 26px;
+
+    border-radius:14px;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+}
+
+.primary{
+
+    background:var(--primary);
+
+    color:#FFF;
+
+}
+
+.primary:hover{
+
+    background:var(--primary-hover);
+
+    transform:translateY(-2px);
+
+}
+
+.secondary{
+
+    border:1px solid var(--border);
+
+}
+
+.secondary:hover{
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.footer-simple{
+
+    margin-top:100px;
+
+    padding:30px 8%;
+
+    border-top:1px solid var(--border);
+
+    text-align:center;
+
+    color:#6B7280;
+
+    font-size:.9rem;
+
+    letter-spacing:.5px;
+
+}
+
+
+/* ========================================
+   RESPONSIVIDADE
+======================================== */
+
+@media (max-width:1024px){
+
+    .hero{
+
+        min-height:auto;
+
+        padding-top:170px;
+
+        padding-bottom:60px;
+
+    }
+
+    .documents-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .document-section{
+
+        width:min(92%,850px);
+
+    }
+
+}
+
+
+@media (max-width:768px){
+
+    header{
+
+        padding:18px 6%;
+
+        flex-direction:column;
+
+        gap:18px;
+
+    }
+
+    nav{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    section{
+
+        padding:80px 0;
+
+    }
+
+    .hero{
+
+        padding-top:190px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.8rem;
+
+    }
+
+    .hero p{
+
+        font-size:1rem;
+
+    }
+
+    .document-card{
+
+        padding:30px;
+
+    }
+
+    .document-content article{
+
+        padding:28px;
+
+    }
+
+    .cta-content{
+
+        padding:50px 30px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+    }
+
+    .hero-buttons a{
+
+        width:100%;
+
+    }
+
+}
+
+
+@media (max-width:480px){
+
+    .logo{
+
+        font-size:1.35rem;
+
+    }
+
+    .badge{
+
+        font-size:.75rem;
+
+        letter-spacing:1px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:2rem;
+
+    }
+
+    .document-card{
+
+        padding:25px;
+
+    }
+
+    .icon{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
+
+    .document-content article{
+
+        padding:22px;
+
+    }
+
+    .document-content h3{
+
+        font-size:1.2rem;
+
+    }
+
+}
+
+
+/* ========================================
+   ANIMAÇÕES
+======================================== */
+
+.hero,
+.documents-grid,
+.document-section,
+.cta{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.document-card{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+.document-content article{
+
+    animation:fadeUp .8s ease both;
+
+}
+
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ========================================
+   SCROLLBAR
+======================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#07070A;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#8B5CF6;
+
+    border-radius:999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#7C3AED;
+
+}
+
+
+/* ========================================
+   SELECTION
+======================================== */
+
+::selection{
+
+    background:#8B5CF6;
+
+    color:#FFF;
+
+}
+
+
+/* ========================================
+   UTILITÁRIOS
+======================================== */
+
+.text-center{
+
+    text-align:center;
+
+}
+
+.hidden{
+
+    display:none;
+
+}
+
+.mt-1{
+
+    margin-top:20px;
+
+}
+
+.mt-2{
+
+    margin-top:40px;
+
+}
+
+.mt-3{
+
+    margin-top:60px;
+
+}
+
+.mb-1{
+
+    margin-bottom:20px;
+
+}
+
+.mb-2{
+
+    margin-bottom:40px;
+
+}
+
+.mb-3{
+
+    margin-bottom:60px;
+
+}
+
+
+/* ========================================
+   FIM DO ARQUIVO
+======================================== */
